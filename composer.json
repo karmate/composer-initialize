@@ -1,0 +1,39 @@
+{
+    "name": "karmate/composer-initialize",
+    "description": "The composer initialize for Karmate",
+    "keywords": ["composer", "initialize", "karmate"],
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mert KABADAYI",
+            "email": "mert@yandex.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "composer-plugin-api": "^1.1"
+    },
+    "require-dev": {
+        "composer/composer": "1.6.*",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karmate\\Composer\\": "src/Karmate/Composer"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Karmate\\Composer\\Test\\": "tests/Karmate/Composer"
+        }
+    },
+    "extra": {
+		"class": [
+            "Karmate\\Composer\\Plugin"
+        ],
+		"branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
